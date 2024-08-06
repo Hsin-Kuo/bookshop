@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+body {
+
+}
+
+.cartMenuImg{
+	width: 100px;
+}
+
+.table.checkout_table{
+	width: 900px;
+	display: inline-block;
+}
+
+.table.checkout_table td, .table.checkout_table th{
+	width: 200px;
+}
+
+#app {
+	width: 960px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	top: 100px;
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+  .main-content {
+    flex: 1;
+  }
+
+  .footer {
+    flex-shrink: 0;
+  }

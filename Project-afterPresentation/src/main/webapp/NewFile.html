@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Dropdown Control</title>
+    <!-- 引入 Bootstrap CSS 和 JavaScript -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <!-- Bootstrap 的 dropdown 按鈕 -->
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Dropdown
+    </button>
+    
+    <!-- dropdown 內容 -->
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Item 1</a>
+        <a class="dropdown-item" href="#">Item 2</a>
+        <a class="dropdown-item" href="#">Item 3</a>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        // 監聽 dropdown 按鈕的點擊事件
+        $('.dropdown-toggle').click(function () {
+            // 切換 dropdown 內容的顯示和隱藏
+            $('.dropdown-menu').toggleClass('show');
+        });
+
+        // 如果點擊 dropdown 內容以外的區域，隱藏 dropdown
+        $(document).on('click', function (e) {
+            if (!$(e.target).closest('.btn-group').length) {
+                $('.dropdown-menu').removeClass('show');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
